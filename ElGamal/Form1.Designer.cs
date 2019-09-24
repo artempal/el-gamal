@@ -315,6 +315,7 @@
             this.buttonKeyGen.TabIndex = 0;
             this.buttonKeyGen.Text = "Генерация ключа";
             this.buttonKeyGen.UseVisualStyleBackColor = true;
+            this.buttonKeyGen.Click += new System.EventHandler(this.ButtonKeyGen_Click);
             // 
             // label9
             // 

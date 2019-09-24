@@ -16,5 +16,12 @@ namespace ElGamal
         {
             InitializeComponent();
         }
+  
+
+        private void ButtonKeyGen_Click(object sender, EventArgs e)
+        {
+            int p = GenPrimes.Gen();
+            textBoxP.Text = p.ToString();
+        }
     }
 }
