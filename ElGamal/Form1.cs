@@ -20,8 +20,10 @@ namespace ElGamal
 
         private void ButtonKeyGen_Click(object sender, EventArgs e)
         {
-            int p = GenPrimes.Gen();
+            int p = GenPrimes.Gen(); 
+            int g = Antiderivative.findPrimitive(p);
             textBoxP.Text = p.ToString();
+            textBoxG.Text = g.ToString();
         }
     }
 }

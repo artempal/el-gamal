@@ -1,38 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElGamal
 {
     class GenPrimes
     {
-        public static List<int> get_primes(int start, int end)
+        static bool IsPrime(int n)
         {
-            // is_prime[i] == true, если i -- простое число
-            bool[] is_prime = new bool[end + 1];
-            for (int i = start; i <= end; ++i) is_prime[i] = true;
-            // primes будет содержать все простые числа на отрезке от 1 до n
-            List<int> primes = new List<int>();
-            // Алгоритм Решето Эратосфена
-            for (int i = start; i <= end; ++i)
-                if (is_prime[i])
-                {
-                    primes.Add(i);
-                    if (i * i <= end)
-                        for (int j = i * i; j <= end; j += i)
-                            is_prime[j] = false;
-                }
-            return primes;
+            for (int i = 2; i <= Math.Sqrt(n); i++)
+                if (n % i == 0)
+                    return false;
+            return true;
         }
 
         public static int Gen()
         {
-            List<int> primes = get_primes(200,4000); // генерирует 3801 простых числа
             Random rnd = new Random();
-            int value = rnd.Next(0,3800);
-            return primes[value];
+            bool prime = false;
+            int number = 0;
+            while (prime != true) // пока число не станет простым
+            {
+                number = rnd.Next(0, 5000); //генерируем число
+                prime = IsPrime(number); // проверка на простоту
+            }
+            
+            return number;
         }
     }
 }
