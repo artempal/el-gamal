@@ -117,13 +117,14 @@
             // 
             // buttonSend2
             // 
+            this.buttonSend2.Enabled = false;
             this.buttonSend2.Location = new System.Drawing.Point(420, 570);
             this.buttonSend2.Name = "buttonSend2";
             this.buttonSend2.Size = new System.Drawing.Size(208, 35);
             this.buttonSend2.TabIndex = 25;
             this.buttonSend2.Text = "Отправить a,b";
             this.buttonSend2.UseVisualStyleBackColor = true;
-            this.buttonSend2.Click += new System.EventHandler(this.buttonSend2_Click);
+            this.buttonSend2.Click += new System.EventHandler(this.ButtonSend2_Click);
             // 
             // textBoxB
             // 
@@ -166,6 +167,7 @@
             this.textBoxK.ReadOnly = true;
             this.textBoxK.Size = new System.Drawing.Size(100, 22);
             this.textBoxK.TabIndex = 20;
+            this.textBoxK.Text = "2";
             // 
             // label12
             // 
@@ -187,18 +189,19 @@
             // 
             // buttonCrypt
             // 
+            this.buttonCrypt.Enabled = false;
             this.buttonCrypt.Location = new System.Drawing.Point(219, 408);
             this.buttonCrypt.Name = "buttonCrypt";
             this.buttonCrypt.Size = new System.Drawing.Size(208, 35);
             this.buttonCrypt.TabIndex = 17;
             this.buttonCrypt.Text = "Зашифровать";
             this.buttonCrypt.UseVisualStyleBackColor = true;
-            this.buttonCrypt.Click += new System.EventHandler(this.buttonCrypt_Click);
+            this.buttonCrypt.Click += new System.EventHandler(this.ButtonCrypt_Click);
             // 
             // textBoxOriginalText
             // 
             this.textBoxOriginalText.Location = new System.Drawing.Point(55, 414);
-            this.textBoxOriginalText.MaxLength = 12;
+            this.textBoxOriginalText.MaxLength = 3;
             this.textBoxOriginalText.Name = "textBoxOriginalText";
             this.textBoxOriginalText.Size = new System.Drawing.Size(102, 22);
             this.textBoxOriginalText.TabIndex = 16;
@@ -313,12 +316,14 @@
             // 
             // buttonDecrypt
             // 
+            this.buttonDecrypt.Enabled = false;
             this.buttonDecrypt.Location = new System.Drawing.Point(453, 599);
             this.buttonDecrypt.Name = "buttonDecrypt";
             this.buttonDecrypt.Size = new System.Drawing.Size(208, 35);
             this.buttonDecrypt.TabIndex = 29;
             this.buttonDecrypt.Text = "Расшифровать";
             this.buttonDecrypt.UseVisualStyleBackColor = true;
+            this.buttonDecrypt.Click += new System.EventHandler(this.ButtonDecrypt_Click);
             // 
             // textBoxM
             // 
@@ -374,7 +379,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 397);
+            this.label10.Location = new System.Drawing.Point(14, 410);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(21, 17);
             this.label10.TabIndex = 12;
@@ -391,17 +396,18 @@
             // 
             // buttonSend1
             // 
-            this.buttonSend1.Location = new System.Drawing.Point(41, 388);
+            this.buttonSend1.Enabled = false;
+            this.buttonSend1.Location = new System.Drawing.Point(41, 401);
             this.buttonSend1.Name = "buttonSend1";
             this.buttonSend1.Size = new System.Drawing.Size(208, 35);
             this.buttonSend1.TabIndex = 10;
             this.buttonSend1.Text = "Отправить ключи";
             this.buttonSend1.UseVisualStyleBackColor = true;
-            this.buttonSend1.Click += new System.EventHandler(this.buttonSend1_Click);
+            this.buttonSend1.Click += new System.EventHandler(this.ButtonSend1_Click);
             // 
             // textBoxY
             // 
-            this.textBoxY.Location = new System.Drawing.Point(106, 347);
+            this.textBoxY.Location = new System.Drawing.Point(106, 342);
             this.textBoxY.Name = "textBoxY";
             this.textBoxY.ReadOnly = true;
             this.textBoxY.Size = new System.Drawing.Size(100, 22);
@@ -410,7 +416,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 347);
+            this.label4.Location = new System.Drawing.Point(84, 342);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(15, 17);
             this.label4.TabIndex = 8;
@@ -435,7 +441,7 @@
             // 
             // textBoxG
             // 
-            this.textBoxG.Location = new System.Drawing.Point(106, 265);
+            this.textBoxG.Location = new System.Drawing.Point(106, 260);
             this.textBoxG.Name = "textBoxG";
             this.textBoxG.ReadOnly = true;
             this.textBoxG.Size = new System.Drawing.Size(100, 22);
@@ -444,7 +450,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(83, 265);
+            this.label2.Location = new System.Drawing.Point(84, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 17);
             this.label2.TabIndex = 4;
@@ -452,7 +458,7 @@
             // 
             // textBoxP
             // 
-            this.textBoxP.Location = new System.Drawing.Point(106, 225);
+            this.textBoxP.Location = new System.Drawing.Point(106, 220);
             this.textBoxP.Name = "textBoxP";
             this.textBoxP.ReadOnly = true;
             this.textBoxP.Size = new System.Drawing.Size(100, 22);
@@ -461,7 +467,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 225);
+            this.label1.Location = new System.Drawing.Point(81, 223);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 17);
             this.label1.TabIndex = 2;

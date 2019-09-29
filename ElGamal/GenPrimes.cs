@@ -4,7 +4,9 @@ namespace ElGamal
 {
     class GenPrimes
     {
-        static bool IsPrime(long n)
+        static int start = 1000; //начало генерации
+        static int end = 2000; //конец генерации
+        static bool IsPrime(long n) // это простое число?
         {
             for (long i = 2; i <= Math.Sqrt(n); i++)
                 if (n % i == 0)
@@ -12,14 +14,13 @@ namespace ElGamal
             return true;
         }
 
-        public static int Gen()
+        public static int Gen() // генератор простых чисел
         {
-            Random rnd = new Random();
             bool prime = false;
             int number = 0;
             while (prime != true) // пока число не станет простым
             {
-                number = rnd.Next(4, 50); //генерируем число
+                number = Calculate.Rand(start, end); //генерируем число
                 prime = IsPrime(number); // проверка на простоту
             }
             
