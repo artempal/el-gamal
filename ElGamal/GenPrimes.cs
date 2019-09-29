@@ -4,9 +4,9 @@ namespace ElGamal
 {
     class GenPrimes
     {
-        static bool IsPrime(int n)
+        static bool IsPrime(long n)
         {
-            for (int i = 2; i <= Math.Sqrt(n); i++)
+            for (long i = 2; i <= Math.Sqrt(n); i++)
                 if (n % i == 0)
                     return false;
             return true;
@@ -19,7 +19,7 @@ namespace ElGamal
             int number = 0;
             while (prime != true) // пока число не станет простым
             {
-                number = rnd.Next(0, 5000); //генерируем число
+                number = rnd.Next(4, 50); //генерируем число
                 prime = IsPrime(number); // проверка на простоту
             }
             
